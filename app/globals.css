@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .smooth {
+    @apply transition-all ease-in-out delay-500 duration-500 ;
+  }
+  .flex-center-row {
+    @apply flex items-center flex-row justify-center ;
+  }
+  .flex-center-col {
+    @apply flex items-center flex-col justify-center ;
+  }
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30px, 1fr));
+  gap: -40px;
+}
+
+
+.hero__container {
+  background: url(./images/hero-img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  background-position:center ;
+}
+
+.hover-parent:hover .hover-class {
+  opacity: 1;
+}
+
+.hover-class {
+  opacity: 0;
+}
