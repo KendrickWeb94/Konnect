@@ -1,13 +1,13 @@
 
 
 import React from 'react'
-
+import HeroTheme from '../Themes/HeroTheme'
 
 
 const Container = () => {
   return (
-    <div className=' w-full bg-transparent text-gray-600 dark:text-white mx-auto relative   h-auto'>
-        
+    <div className=' w-full mx-auto relative   h-auto'>
+        <HeroTheme />
         <div className="pt-6">
          
         </div>

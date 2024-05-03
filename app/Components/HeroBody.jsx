@@ -1,9 +1,5 @@
-import { Button } from "@radix-ui/themes"
-import Image from "next/image"
-import heroimg from "../images/about-img.png"
-import herosm from "../images/about-sm.png"
 
-{/*
+
 import Image from 'next/image'
 import React from 'react'
 import user1 from "../images/balazs-orban.png"
@@ -16,34 +12,63 @@ import Comment from './Comment'
 import Button from '../Themes/Button'
 import Collaboration from '../Themes/Collaboration'
 
-*/}
-
 
 const HeroBody = () => {
   return (
-    <section className='@container w-full mx-auto text-center relative py-8 pb-16'>
-      <div className="absolute w-fit top-0 bottom-0 left-0 space-x-[15rem] right-0">
-        <span className=" block w-[250px] rounded-full h-[100px] blur-[100px] bg-green-400"></span>
-        <span className=" block w-[250px] rounded-full h-[100px] blur-[100px] bg-green-300"></span>
-        <span className=" block w-[250px] rounded-full h-[100px] blur-[100px] bg-lime-200"></span>
-      </div>
-      <div className="absolute w-fit top-0  space-x-[15rem] right-0">
-        <span className=" block w-[250px] rounded-full h-[100px] blur-[100px] bg-green-400"></span>
-        <span className=" block w-[250px] rounded-full h-[100px] blur-[100px] bg-lime-300"></span>
-      </div>
-      <h1 className=" hidden">hello</h1>
-        <div className="flex z-50 flex-col text-balance space-y-5">
+    <section className='@container py-4 pb-16'>
+      <div className=' w-full flex justify-between  items-center '>
+       <div className="  space-y-7">
+       <div className=' font-bold text-white text-balance text-[min(7vw,70px)]'>Do more together<br></br> as a <span className=' text-blue-500 italic font-extrabold'>"Team"</span></div>
+            <p className="text-gray-200 text-[13px] leading-6">
+                konnect is a social media app .not only an app it is for teams and those who wants to do work together 
+            </p>
+            <p className=' text-white text-sm'>  over +50K | Active Users</p>
+            
+            <Button buttonText="Download App"><p></p></Button>
+            <Collaboration />
          
+       </div>  
+          <div className=" lg:flex ds:hidden cursor-pointer  flex-col space-y-6">
+            
+                <main className='  flex hover-parent items-center flex-row-reverse gap-4 smooth'>
+                  <Image src={user1} className=' w-9 h-9 object-cover rounded-full'/>
+                  <span className=' hover-class smooth'><Comment comment="ive used this and it is great nice work Konnect"/></span>
+                </main>
+                <main className=' flex hover-parent items-center flex-row-reverse gap-4 smooth'>
+                  <Image src={user2} className=' w-9 h-9 object-cover rounded-full'/>
+                  <span className=' hover-class smooth'><Comment comment="
+Welcome to the enterprise
+this isnt televised
+"/></span>
+                </main>
+                <main className=' flex hover-parent items-center flex-row-reverse gap-4 smooth'>
+                  <Image src={user3} className=' w-9 h-9 object-cover rounded-full'/>
+                  <span className=' hover-class smooth'><Comment comment="looking bright , its a sunny day
+i got a feeling that's its gon be good today"/></span>
+                </main>
+                <main className=' flex hover-parent items-center flex-row-reverse gap-4 smooth'>
+                  <Image src={user4} className=' w-9 h-9 object-cover rounded-full'/>
+                  <span className=' hover-class smooth'><Comment comment="
+if anything happens i was born to run
+nikes on , headphones blasting
+"/></span>
+                </main>
+                <main className=' flex hover-parent items-center flex-row-reverse gap-4 smooth'>
+                  <Image src={user5} className=' w-9 h-9 object-cover rounded-full'/>
+                  <span className=' hover-class smooth'><Comment comment="let me mind my business
+just be cool and not take this serious
+"/></span>
+                </main>
+                <main className=' flex hover-parent items-center flex-row-reverse gap-4 smooth'>
+                  <Image src={user6} className=' w-9 h-9 object-cover rounded-full'/>
+                  <span className=' hover-class smooth'><Comment comment="
+hands are shaking , legs are wobbling
+cause i know how it ends
+"/></span>
+                </main>
+          </div>
+    </div>
 
-            <h1 className="  text-[5vw] font-semibold text-center text-balance text-green-400">Do more together as a team with turbo fast response  </h1>
-
-            <p className=" text-[13px] leading-5 text-gray-400">get the best app for modern super fast time with absolutely no loading or waiting time , suitable for all devices </p>
-
-            <Button className=" p-3 w-[200px] text-center bg-gradient-to-r hover:from-green-300 hover:to-lime-400 smooth from-green-400 to-lime-300 font-medium text-sm rounded-3xl mx-auto">Get Started</Button>
-
-            <Image src={heroimg} className=" mx-auto w-full max-w-[76%] rounded-md overflow-hidden ds:hidden h-auto sm:block shadow-2xl shadow-green-300/35"/>
-            <Image src={herosm} className=" mx-auto w-full max-w-[76%] rounded-md overflow-hidden hidden shadow-2xl shadow-green-300/35"/>
-        </div>
     </section>
   )
 }
